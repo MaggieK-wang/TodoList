@@ -19,7 +19,7 @@
           :label="item.task_Name" :key="item.id">
          <label> {{item.task_Name}}</label>
          <div class="btn">
-          <i class="el-icon-close" @click="del(item.id)" disabled="fasle" title="删除计划"/>
+          <i class="el-icon-close" @click="del(item)" disabled="fasle" title="删除计划"/>
           <i class="el-icon-check" @click="completeSinge(item)" disabled="fasle" title="完成计划"  />
           </div>
            </el-checkbox>
@@ -98,9 +98,9 @@ methods:{
       this.$store.dispatch('changeStatus',status);
   },
   // 删除
-  del(id){
+  del(item){
         // this.TodoList.splice(this.TodoList.indexOf(index),1);
-        this.$store.dispatch('removeTodo',id)
+        this.$store.dispatch('removeTodo',item)
   },
 // 获取点中
  checkboxed(status){
