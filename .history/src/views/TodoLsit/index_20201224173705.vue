@@ -134,7 +134,7 @@ methods:{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgba(243, 197, 197, 0.3);
+  background: rgba(133, 248, 210, 0.3);
   &-input{
     display: flex;
     .el-button{

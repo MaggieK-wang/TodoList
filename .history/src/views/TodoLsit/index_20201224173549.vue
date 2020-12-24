@@ -99,6 +99,7 @@ methods:{
   },
   // 删除
   del(id){
+        console.log(id,'===');
         // this.TodoList.splice(this.TodoList.indexOf(index),1);
         this.$store.dispatch('removeTodo',id)
   },
