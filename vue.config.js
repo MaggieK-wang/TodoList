@@ -7,6 +7,11 @@ function resolve(dir) {
 }
 
 module.exports = {
+  publicPath: '/',
+  outputDir: 'dist',
+  assetsDir: 'static',
+  // lintOnSave: process.env.NODE_ENV === 'development',
+  productionSourceMap: false,
   devServer: {
     before(app) {
       app.post("/api/city/getList", (req, res) => {
